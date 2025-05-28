@@ -85,39 +85,107 @@ header > p{
     font-weight: normal;
 }
 body {
-  background: url(https://3em3.com/wp-content/uploads/2023/02/ilha_do_campeche01.jpg) no-repeat center center fixed;
-  background-size: cover;
-  margin: 0;
-  padding: 0;
+    background-image: url(https://images.pexels.com/photos/15202803/pexels-photo-15202803/free-photo-of-mar-natureza-praia-litoral.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
 }
 @media (max-width: 768px) {
   body {
     background-attachment: scroll;
   }
 }
-main {
-    background-color:white;
-    text-align: justify;
-    font-family: var(--fonte-texto);
-    min-width: 300px;
-    max-width: 1000px;
-    margin: auto;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.537);
-    padding: 5px;
-    border-radius: 10px;
-}
-article > h2,h3{
-    font-family: var(--fonte-tituloh2);
-}
-article > p{
-    line-height: 2;
-    text-indent: 30px;
-}
-img { 
-    margin: auto;
-    display: block;
+form {
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 91, 143, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
+h2 {
+  text-align: center;
+  color: var(--cor2);
+  margin-bottom: 20px;
+  
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #005b8f;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 0px 10px;
+  margin-bottom: 16px;
+  border: 1.5px solid #005b8f;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #007acc;
+  outline: none;
+  
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 8px;
+  transform: scale(1.1);
+  vertical-align: middle;
+}
+
+button {
+  cursor: pointer;
+  background-color: #005b8f;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-right: 12px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #007acc;
+}
+
+button[type="reset"] {
+  background-color: #999;
+}
+
+button[type="reset"]:hover {
+  background-color: #666;
+}
+
+
+@media (max-width: 480px) {
+  form {
+    padding: 15px;
+  }
+  
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
 footer {
     background-image: linear-gradient(to right, var(--cor7),var(--cor8));
     padding: 2px;

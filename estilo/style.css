@@ -28,6 +28,11 @@ body {
   margin: 0;
   padding: 0;
 }
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+}
 header{
     background-image: linear-gradient(to right, var(--cor7),var(--cor8));
     padding: 20px;

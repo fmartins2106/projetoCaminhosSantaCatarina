@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Quicksand:wght@300..700&display=swap');
@@ -84,40 +85,96 @@ header > p{
     padding: 10px 14px;
     font-weight: normal;
 }
-body {
-  background: url(https://3em3.com/wp-content/uploads/2023/02/ilha_do_campeche01.jpg) no-repeat center center fixed;
-  background-size: cover;
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
 @media (max-width: 768px) {
   body {
     background-attachment: scroll;
   }
 }
-main {
-    background-color:white;
-    text-align: justify;
-    font-family: var(--fonte-texto);
-    min-width: 300px;
-    max-width: 1000px;
-    margin: auto;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.537);
-    padding: 5px;
-    border-radius: 10px;
-}
-article > h2,h3{
-    font-family: var(--fonte-tituloh2);
-}
-article > p{
-    line-height: 2;
-    text-indent: 30px;
-}
-img { 
-    margin: auto;
-    display: block;
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--cor6);
+  padding-top: 30px;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #005b8f;
+  color: white;
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f1f9ff;
+  transition: background-color 0.3s;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #005b8f;
+  }
+}
 footer {
     background-image: linear-gradient(to right, var(--cor7),var(--cor8));
     padding: 2px;
